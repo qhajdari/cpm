@@ -12,16 +12,20 @@ namespace ResourceManagementService.Controllers;
 public class ResourceController : ControllerBase
 {
     private readonly ResourceContext _context;
+    private readonly ILogger<ResourceController> _logger;
 
-    public ResourceController(ResourceContext context)
+
+    public ResourceController(ResourceContext context, ILogger<ResourceController> logger)
     {
         _context = context;
+        _logger = logger;
     }
 
     // GET: /Resource
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Resource>>> GetResources()
     {
+          _logger.LogInformation("Getting all resources");
         return await _context.Resources.ToListAsync();
     }
 

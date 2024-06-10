@@ -1,0 +1,147 @@
+2024-06-10 23:09:51.883 +02:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-06-10 23:09:52.120 +02:00 [INF] Starting up
+2024-06-10 23:09:52.124 +02:00 [DBG] Hosting starting
+2024-06-10 23:09:52.194 +02:00 [INF] Now listening on: http://localhost:5047
+2024-06-10 23:09:52.198 +02:00 [DBG] Loaded hosting startup assembly ProjectManagementService
+2024-06-10 23:09:52.230 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-10 23:09:52.232 +02:00 [INF] Hosting environment: Development
+2024-06-10 23:09:52.233 +02:00 [INF] Content root path: C:\Users\Lenovo\Desktop\Construction Project Management\Application\ProjectManagementService
+2024-06-10 23:09:52.235 +02:00 [DBG] Hosting started
+2024-06-10 23:09:59.845 +02:00 [DBG] Connection id "0HN49I6O2FTUV" accepted.
+2024-06-10 23:10:00.030 +02:00 [DBG] Connection id "0HN49I6O2FTUV" started.
+2024-06-10 23:10:02.219 +02:00 [DBG] Connection id "0HN49I6O2FTV0" accepted.
+2024-06-10 23:10:02.248 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5047/ - null null
+2024-06-10 23:10:02.585 +02:00 [DBG] Connection id "0HN49I6O2FTV0" started.
+2024-06-10 23:10:02.584 +02:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-06-10 23:10:02.645 +02:00 [DBG] No candidates found for the request path '/'
+2024-06-10 23:10:02.647 +02:00 [DBG] Request did not match any endpoints
+2024-06-10 23:10:02.671 +02:00 [DBG] The request path  does not match the path filter
+2024-06-10 23:10:02.673 +02:00 [WRN] Failed to determine the https port for redirect.
+2024-06-10 23:10:02.731 +02:00 [DBG] Connection id "0HN49I6O2FTUV" completed keep alive response.
+2024-06-10 23:10:02.734 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5047/ - 404 0 null 487.9271ms
+2024-06-10 23:10:02.738 +02:00 [DBG] Connection id "0HN49I6O2FTUV" received FIN.
+2024-06-10 23:10:02.742 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5047/, Response status code: 404
+2024-06-10 23:10:03.098 +02:00 [DBG] Connection id "0HN49I6O2FTUV" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-10 23:10:03.105 +02:00 [DBG] Connection id "0HN49I6O2FTUV" disconnecting.
+2024-06-10 23:10:03.106 +02:00 [DBG] Connection id "0HN49I6O2FTUV" stopped.
+2024-06-10 23:10:07.262 +02:00 [DBG] Connection id "0HN49I6O2FTV0" received FIN.
+2024-06-10 23:10:07.271 +02:00 [DBG] Connection id "0HN49I6O2FTV0" disconnecting.
+2024-06-10 23:10:07.281 +02:00 [DBG] Connection id "0HN49I6O2FTV0" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-10 23:10:07.296 +02:00 [DBG] Connection id "0HN49I6O2FTV0" stopped.
+2024-06-10 23:10:07.339 +02:00 [DBG] Connection id "0HN49I6O2FTV1" accepted.
+2024-06-10 23:10:07.348 +02:00 [DBG] Connection id "0HN49I6O2FTV1" started.
+2024-06-10 23:10:07.350 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5047/swagger/ - null null
+2024-06-10 23:10:07.353 +02:00 [DBG] No candidates found for the request path '/swagger/'
+2024-06-10 23:10:07.355 +02:00 [DBG] Request did not match any endpoints
+2024-06-10 23:10:07.366 +02:00 [DBG] Connection id "0HN49I6O2FTV1" completed keep alive response.
+2024-06-10 23:10:07.382 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5047/swagger/ - 301 0 null 32.5279ms
+2024-06-10 23:10:07.418 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5047/swagger/index.html - null null
+2024-06-10 23:10:07.422 +02:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2024-06-10 23:10:07.533 +02:00 [DBG] Request did not match any endpoints
+2024-06-10 23:10:07.777 +02:00 [DBG] Connection id "0HN49I6O2FTV1" completed keep alive response.
+2024-06-10 23:10:07.778 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5047/swagger/index.html - 200 null text/html;charset=utf-8 360.4322ms
+2024-06-10 23:10:08.019 +02:00 [DBG] Connection id "0HN49I6O2FTV1" received FIN.
+2024-06-10 23:10:08.021 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5047/swagger/favicon-32x32.png - null null
+2024-06-10 23:10:08.025 +02:00 [DBG] Connection id "0HN49I6O2FTV1" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-10 23:10:08.027 +02:00 [DBG] No candidates found for the request path '/swagger/favicon-32x32.png'
+2024-06-10 23:10:08.030 +02:00 [DBG] Connection id "0HN49I6O2FTV1" disconnecting.
+2024-06-10 23:10:08.062 +02:00 [DBG] Connection id "0HN49I6O2FTV2" accepted.
+2024-06-10 23:10:08.066 +02:00 [DBG] Request did not match any endpoints
+2024-06-10 23:10:08.081 +02:00 [DBG] Connection id "0HN49I6O2FTV2" started.
+2024-06-10 23:10:08.099 +02:00 [DBG] The file transmission was cancelled
+System.OperationCanceledException: The operation was canceled.
+   at System.Threading.CancellationToken.ThrowOperationCanceledException()
+   at System.Threading.CancellationToken.ThrowIfCancellationRequested()
+   at Microsoft.AspNetCore.Http.SendFileResponseExtensions.SendFileAsyncCore(HttpResponse response, IFileInfo file, Int64 offset, Nullable`1 count, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.SendFileResponseExtensions.SendFileAsyncCore(HttpResponse response, IFileInfo file, Int64 offset, Nullable`1 count, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileContext.SendAsync()
+2024-06-10 23:10:08.102 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5047/swagger/v1/swagger.json - null null
+2024-06-10 23:10:08.135 +02:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2024-06-10 23:10:08.135 +02:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-06-10 23:10:08.135 +02:00 [DBG] Request did not match any endpoints
+2024-06-10 23:10:08.138 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5047/swagger/favicon-32x32.png - 499 628 image/png 117.2533ms
+2024-06-10 23:10:08.283 +02:00 [DBG] Connection id "0HN49I6O2FTV1" stopped.
+2024-06-10 23:10:08.287 +02:00 [DBG] Connection id "0HN49I6O2FTV2" completed keep alive response.
+2024-06-10 23:10:08.288 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5047/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 185.7259ms
+2024-06-10 23:10:15.246 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5047/Project - null null
+2024-06-10 23:10:15.251 +02:00 [DBG] 1 candidate(s) found for the request path '/Project'
+2024-06-10 23:10:15.255 +02:00 [DBG] Endpoint 'ProjectManagementService.Controllers.ProjectController.GetProjects (ProjectManagementService)' with route pattern 'Project' is valid for the request path '/Project'
+2024-06-10 23:10:15.283 +02:00 [DBG] Request matched endpoint 'ProjectManagementService.Controllers.ProjectController.GetProjects (ProjectManagementService)'
+2024-06-10 23:10:15.286 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-06-10 23:10:15.288 +02:00 [INF] Executing endpoint 'ProjectManagementService.Controllers.ProjectController.GetProjects (ProjectManagementService)'
+2024-06-10 23:10:15.334 +02:00 [INF] Route matched with {action = "GetProjects", controller = "Project"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ProjectManagementService.Models.Project]]] GetProjects() on controller ProjectManagementService.Controllers.ProjectController (ProjectManagementService).
+2024-06-10 23:10:15.337 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-06-10 23:10:15.339 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-06-10 23:10:15.347 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-06-10 23:10:15.348 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-06-10 23:10:15.349 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-06-10 23:10:15.352 +02:00 [DBG] Executing controller factory for controller ProjectManagementService.Controllers.ProjectController (ProjectManagementService)
+2024-06-10 23:10:15.527 +02:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-06-10 23:10:15.553 +02:00 [DBG] Executed controller factory for controller ProjectManagementService.Controllers.ProjectController (ProjectManagementService)
+2024-06-10 23:10:15.558 +02:00 [INF] Getting all projects
+2024-06-10 23:10:16.400 +02:00 [DBG] Entity Framework Core 8.0.6 initialized 'ProjectContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:8.0.6' with options: None
+2024-06-10 23:10:16.482 +02:00 [DBG] Compiling query expression: 
+'DbSet<Project>()
+    .Include(p => p.Tasks)'
+2024-06-10 23:10:16.630 +02:00 [DBG] Including navigation: 'Project.Tasks'.
+2024-06-10 23:10:16.946 +02:00 [DBG] Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<Project>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Client Projections:
+            0 -> Dictionary<IProperty, int> { [Property: Project.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Project.Description (string) Required, 1], [Property: Project.EndDate (DateTime) Required, 2], [Property: Project.Name (string) Required, 3], [Property: Project.StartDate (DateTime) Required, 4] }
+            1 -> 0
+            2 -> Dictionary<IProperty, int> { [Property: Task.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 5], [Property: Task.Description (string) Required, 6], [Property: Task.DueDate (DateTime) Required, 7], [Property: Task.Name (string) Required, 8], [Property: Task.ProjectId (int) Required FK Index, 9] }
+            3 -> 5
+        SELECT p.Id, p.Description, p.EndDate, p.Name, p.StartDate, t.Id, t.Description, t.DueDate, t.Name, t.ProjectId
+        FROM Projects AS p
+        LEFT JOIN Tasks AS t ON p.Id == t.ProjectId
+        ORDER BY p.Id ASC), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Project>, 
+    ProjectManagementService.Data.ProjectContext, 
+    False, 
+    False, 
+    True
+)'
+2024-06-10 23:10:17.038 +02:00 [DBG] Creating DbConnection.
+2024-06-10 23:10:17.071 +02:00 [DBG] Created DbConnection. (31ms).
+2024-06-10 23:10:17.077 +02:00 [DBG] Opening connection to database 'ProjectManagement' on server 'DESKTOP-OI1VSCU\SQLEXPRESS'.
+2024-06-10 23:10:17.739 +02:00 [DBG] Opened connection to database 'ProjectManagement' on server 'DESKTOP-OI1VSCU\SQLEXPRESS'.
+2024-06-10 23:10:17.745 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-06-10 23:10:17.759 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (4ms).
+2024-06-10 23:10:17.763 +02:00 [DBG] Initialized DbCommand for 'ExecuteReader' (17ms).
+2024-06-10 23:10:17.771 +02:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Description], [p].[EndDate], [p].[Name], [p].[StartDate], [t].[Id], [t].[Description], [t].[DueDate], [t].[Name], [t].[ProjectId]
+FROM [Projects] AS [p]
+LEFT JOIN [Tasks] AS [t] ON [p].[Id] = [t].[ProjectId]
+ORDER BY [p].[Id]
+2024-06-10 23:10:18.390 +02:00 [INF] Executed DbCommand (619ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Description], [p].[EndDate], [p].[Name], [p].[StartDate], [t].[Id], [t].[Description], [t].[DueDate], [t].[Name], [t].[ProjectId]
+FROM [Projects] AS [p]
+LEFT JOIN [Tasks] AS [t] ON [p].[Id] = [t].[ProjectId]
+ORDER BY [p].[Id]
+2024-06-10 23:10:18.414 +02:00 [DBG] Closing data reader to 'ProjectManagement' on server 'DESKTOP-OI1VSCU\SQLEXPRESS'.
+2024-06-10 23:10:18.482 +02:00 [DBG] A data reader for 'ProjectManagement' on server 'DESKTOP-OI1VSCU\SQLEXPRESS' is being disposed after spending 85ms reading results.
+2024-06-10 23:10:18.505 +02:00 [DBG] Closing connection to database 'ProjectManagement' on server 'DESKTOP-OI1VSCU\SQLEXPRESS'.
+2024-06-10 23:10:18.537 +02:00 [DBG] Closed connection to database 'ProjectManagement' on server 'DESKTOP-OI1VSCU\SQLEXPRESS' (32ms).
+2024-06-10 23:10:18.552 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-06-10 23:10:18.565 +02:00 [DBG] Attempting to select an output formatter based on Accept header '["text/plain"]'.
+2024-06-10 23:10:18.570 +02:00 [DBG] Could not find an output formatter based on content negotiation. Accepted types were (["text/plain"])
+2024-06-10 23:10:18.576 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-06-10 23:10:18.582 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-06-10 23:10:18.585 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-06-10 23:10:18.588 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[ProjectManagementService.Models.Project, ProjectManagementService, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-06-10 23:10:18.619 +02:00 [INF] Executed action ProjectManagementService.Controllers.ProjectController.GetProjects (ProjectManagementService) in 3265.1284ms
+2024-06-10 23:10:18.621 +02:00 [INF] Executed endpoint 'ProjectManagementService.Controllers.ProjectController.GetProjects (ProjectManagementService)'
+2024-06-10 23:10:18.623 +02:00 [DBG] Connection id "0HN49I6O2FTV2" completed keep alive response.
+2024-06-10 23:10:18.639 +02:00 [DBG] 'ProjectContext' disposed.
+2024-06-10 23:10:18.649 +02:00 [DBG] Disposing connection to database 'ProjectManagement' on server 'DESKTOP-OI1VSCU\SQLEXPRESS'.
+2024-06-10 23:10:18.655 +02:00 [DBG] Disposed connection to database '' on server '' (5ms).
+2024-06-10 23:10:18.668 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5047/Project - 200 null application/json; charset=utf-8 3421.8476ms
+2024-06-10 23:10:37.406 +02:00 [INF] Application is shutting down...
+2024-06-10 23:10:37.407 +02:00 [DBG] Hosting stopping
+2024-06-10 23:10:37.417 +02:00 [DBG] Connection id "0HN49I6O2FTV2" disconnecting.
+2024-06-10 23:10:37.424 +02:00 [DBG] Connection id "0HN49I6O2FTV2" stopped.
+2024-06-10 23:10:37.437 +02:00 [DBG] Connection id "0HN49I6O2FTV2" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-10 23:10:37.446 +02:00 [DBG] Hosting stopped

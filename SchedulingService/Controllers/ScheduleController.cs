@@ -12,16 +12,19 @@ namespace SchedulingService.Controllers;
 public class ScheduleController : ControllerBase
 {
     private readonly SchedulingContext _context;
+    private readonly ILogger<ScheduleController> _logger;
 
-    public ScheduleController(SchedulingContext context)
+    public ScheduleController(SchedulingContext context, ILogger<ScheduleController> logger)
     {
         _context = context;
+        _logger = logger;
     }
 
     // GET: /Schedule
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Schedule>>> GetSchedules()
     {
+          _logger.LogInformation("Getting all schedules");
         return await _context.Schedules.Include(s => s.Events).ToListAsync();
     }
 

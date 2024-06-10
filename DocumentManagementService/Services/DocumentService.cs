@@ -1,7 +1,7 @@
 using DocumentManagementService.Models;
 
 namespace DocumentManagementService.Services;
-public class DocumentService
+public class DocumentService : IDocumentService
 {
     private readonly string _storagePath;
 

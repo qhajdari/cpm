@@ -14,7 +14,7 @@ builder.Host.UseSerilog(); // Add this line to use Serilog as the logging provid
 
 
 // Add services to the container.
-builder.Services.AddSingleton<DocumentService>();
+builder.Services.AddSingleton<IDocumentService, DocumentService>();
 builder.Services.AddControllers();
 
 // Add services to the container.

@@ -10,10 +10,13 @@ namespace UserManagementService.Controllers;
 public class UserController : ControllerBase
 {
     private readonly UserContext _context;
+    private readonly ILogger<UserController> _logger;
 
-    public UserController(UserContext context)
+
+    public UserController(UserContext context, ILogger<UserController> logger)
     {
         _context = context;
+        _logger = logger;
     }
 
     [HttpPost("register")]
