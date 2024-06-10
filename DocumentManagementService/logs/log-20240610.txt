@@ -1,0 +1,12 @@
+2024-06-10 16:19:34.255 +02:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-06-10 16:19:35.954 +02:00 [INF] Starting up
+2024-06-10 16:19:35.986 +02:00 [DBG] Hosting starting
+2024-06-10 16:19:36.066 +02:00 [INF] Now listening on: http://localhost:5086
+2024-06-10 16:19:36.067 +02:00 [DBG] Loaded hosting startup assembly DocumentManagementService
+2024-06-10 16:19:36.068 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-06-10 16:19:36.069 +02:00 [INF] Hosting environment: Development
+2024-06-10 16:19:36.069 +02:00 [INF] Content root path: C:\Users\Lenovo\Desktop\Construction Project Management\Application\DocumentManagementService
+2024-06-10 16:19:36.070 +02:00 [DBG] Hosting started
+2024-06-10 16:19:52.632 +02:00 [INF] Application is shutting down...
+2024-06-10 16:19:52.638 +02:00 [DBG] Hosting stopping
+2024-06-10 16:19:52.756 +02:00 [DBG] Hosting stopped
