@@ -8,5 +8,10 @@ public class SchedulingContext : DbContext
 
     public DbSet<Schedule> Schedules { get; set; }
     public DbSet<Event> Events { get; set; }
+
+     protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.HasDefaultSchema("ScheduleManagement");
+    }
 }
 

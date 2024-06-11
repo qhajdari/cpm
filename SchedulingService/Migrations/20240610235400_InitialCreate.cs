@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
+using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
@@ -11,13 +12,17 @@ namespace SchedulingService.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.EnsureSchema(
+                name: "ScheduleManagement");
+
             migrationBuilder.CreateTable(
                 name: "Schedules",
+                schema: "ScheduleManagement",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Name = table.Column<string>(type: "text", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -26,14 +31,15 @@ namespace SchedulingService.Migrations
 
             migrationBuilder.CreateTable(
                 name: "Events",
+                schema: "ScheduleManagement",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    StartTime = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    EndTime = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    ScheduleId = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Name = table.Column<string>(type: "text", nullable: false),
+                    StartTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    EndTime = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    ScheduleId = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -41,6 +47,7 @@ namespace SchedulingService.Migrations
                     table.ForeignKey(
                         name: "FK_Events_Schedules_ScheduleId",
                         column: x => x.ScheduleId,
+                        principalSchema: "ScheduleManagement",
                         principalTable: "Schedules",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -48,6 +55,7 @@ namespace SchedulingService.Migrations
 
             migrationBuilder.CreateIndex(
                 name: "IX_Events_ScheduleId",
+                schema: "ScheduleManagement",
                 table: "Events",
                 column: "ScheduleId");
         }
@@ -56,10 +64,12 @@ namespace SchedulingService.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Events");
+                name: "Events",
+                schema: "ScheduleManagement");
 
             migrationBuilder.DropTable(
-                name: "Schedules");
+                name: "Schedules",
+                schema: "ScheduleManagement");
         }
     }
 }

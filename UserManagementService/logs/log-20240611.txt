@@ -1,0 +1,102 @@
+2024-06-11 00:00:15.804 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5297/swagger - null null
+2024-06-11 00:00:15.822 +02:00 [DBG] Connection id "0HN49J1PLOLIO" completed keep alive response.
+2024-06-11 00:00:15.835 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5297/swagger - 301 0 null 31.0595ms
+2024-06-11 00:00:15.846 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5297/swagger/index.html - null null
+2024-06-11 00:00:15.966 +02:00 [DBG] Connection id "0HN49J1PLOLIO" completed keep alive response.
+2024-06-11 00:00:15.967 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5297/swagger/index.html - 200 null text/html;charset=utf-8 121.4697ms
+2024-06-11 00:00:28.166 +02:00 [DBG] Connection id "0HN49J1PLOLIP" accepted.
+2024-06-11 00:00:28.367 +02:00 [DBG] Connection id "0HN49J1PLOLIP" started.
+2024-06-11 00:00:28.378 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5297/swagger - null null
+2024-06-11 00:00:28.383 +02:00 [DBG] Connection id "0HN49J1PLOLIP" completed keep alive response.
+2024-06-11 00:00:28.384 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5297/swagger - 301 0 null 6.3211ms
+2024-06-11 00:00:28.407 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5297/swagger/index.html - null null
+2024-06-11 00:00:28.418 +02:00 [DBG] Connection id "0HN49J1PLOLIP" completed keep alive response.
+2024-06-11 00:00:28.419 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5297/swagger/index.html - 200 null text/html;charset=utf-8 12.2904ms
+2024-06-11 00:00:28.490 +02:00 [DBG] Connection id "0HN49J1PLOLIQ" accepted.
+2024-06-11 00:00:28.589 +02:00 [DBG] Connection id "0HN49J1PLOLIR" accepted.
+2024-06-11 00:00:28.589 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5297/swagger/swagger-ui.css - null null
+2024-06-11 00:00:28.589 +02:00 [DBG] Connection id "0HN49J1PLOLIQ" started.
+2024-06-11 00:00:28.590 +02:00 [DBG] Connection id "0HN49J1PLOLIR" started.
+2024-06-11 00:00:28.614 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5297/swagger/swagger-ui-standalone-preset.js - null null
+2024-06-11 00:00:28.617 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5297/swagger/swagger-ui-bundle.js - null null
+2024-06-11 00:00:28.663 +02:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-06-11 00:00:28.664 +02:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-06-11 00:00:28.741 +02:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-06-11 00:00:28.762 +02:00 [DBG] Connection id "0HN49J1PLOLIQ" completed keep alive response.
+2024-06-11 00:00:29.022 +02:00 [DBG] Connection id "0HN49J1PLOLIP" completed keep alive response.
+2024-06-11 00:00:29.036 +02:00 [DBG] Connection id "0HN49J1PLOLIR" completed keep alive response.
+2024-06-11 00:00:29.184 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5297/swagger/swagger-ui-standalone-preset.js - 200 339486 text/javascript 569.8302ms
+2024-06-11 00:00:29.185 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5297/swagger/swagger-ui.css - 200 143943 text/css 595.3514ms
+2024-06-11 00:00:29.220 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5297/swagger/swagger-ui-bundle.js - 200 1096145 text/javascript 602.6031ms
+2024-06-11 00:00:29.460 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5297/swagger/favicon-32x32.png - null null
+2024-06-11 00:00:29.506 +02:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2024-06-11 00:00:29.568 +02:00 [DBG] Connection id "0HN49J1PLOLIR" completed keep alive response.
+2024-06-11 00:00:29.569 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5297/swagger/favicon-32x32.png - 200 628 image/png 110.0903ms
+2024-06-11 00:00:30.009 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5297/swagger/v1/swagger.json - null null
+2024-06-11 00:00:30.669 +02:00 [DBG] Connection id "0HN49J1PLOLIR" completed keep alive response.
+2024-06-11 00:00:30.672 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5297/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 662.5558ms
+2024-06-11 00:00:31.701 +02:00 [DBG] Connection id "0HN49J1PLOLIP" received FIN.
+2024-06-11 00:00:31.702 +02:00 [DBG] Connection id "0HN49J1PLOLIR" received FIN.
+2024-06-11 00:00:31.702 +02:00 [DBG] Connection id "0HN49J1PLOLIQ" received FIN.
+2024-06-11 00:00:31.704 +02:00 [DBG] Connection id "0HN49J1PLOLIP" disconnecting.
+2024-06-11 00:00:31.705 +02:00 [DBG] Connection id "0HN49J1PLOLIR" disconnecting.
+2024-06-11 00:00:31.706 +02:00 [DBG] Connection id "0HN49J1PLOLIQ" disconnecting.
+2024-06-11 00:00:31.707 +02:00 [DBG] Connection id "0HN49J1PLOLIP" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-11 00:00:31.708 +02:00 [DBG] Connection id "0HN49J1PLOLIR" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-11 00:00:31.710 +02:00 [DBG] Connection id "0HN49J1PLOLIQ" stopped.
+2024-06-11 00:00:31.723 +02:00 [DBG] Connection id "0HN49J1PLOLIQ" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-11 00:00:31.730 +02:00 [DBG] Connection id "0HN49J1PLOLIP" stopped.
+2024-06-11 00:00:31.730 +02:00 [DBG] Connection id "0HN49J1PLOLIR" stopped.
+2024-06-11 00:00:35.040 +02:00 [DBG] Connection id "0HN49J1PLOLIS" accepted.
+2024-06-11 00:00:35.041 +02:00 [DBG] Connection id "0HN49J1PLOLIS" started.
+2024-06-11 00:00:35.044 +02:00 [INF] Request starting HTTP/1.1 GET http://localhost:5297/User/me - null null
+2024-06-11 00:00:35.046 +02:00 [DBG] The request path  does not match the path filter
+2024-06-11 00:00:35.056 +02:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-06-11 00:00:35.057 +02:00 [DBG] Connection id "0HN49J1PLOLIS" completed keep alive response.
+2024-06-11 00:00:35.072 +02:00 [INF] Request finished HTTP/1.1 GET http://localhost:5297/User/me - 404 0 null 28.3614ms
+2024-06-11 00:00:35.086 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5297/User/me, Response status code: 404
+2024-06-11 00:00:36.705 +02:00 [DBG] Connection id "0HN49J1PLOLIS" received FIN.
+2024-06-11 00:00:36.707 +02:00 [DBG] Connection id "0HN49J1PLOLIS" disconnecting.
+2024-06-11 00:00:36.709 +02:00 [DBG] Connection id "0HN49J1PLOLIS" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-11 00:00:36.721 +02:00 [DBG] Connection id "0HN49J1PLOLIS" stopped.
+2024-06-11 00:00:54.470 +02:00 [DBG] Connection id "0HN49J1PLOLIT" accepted.
+2024-06-11 00:00:54.485 +02:00 [DBG] Connection id "0HN49J1PLOLIT" started.
+2024-06-11 00:00:54.488 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5297/User/login - application/json 86
+2024-06-11 00:00:54.515 +02:00 [DBG] POST requests are not supported
+2024-06-11 00:00:54.517 +02:00 [DBG] The request has an origin header: 'http://localhost:5297'.
+2024-06-11 00:00:54.518 +02:00 [INF] CORS policy execution successful.
+2024-06-11 00:00:54.520 +02:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-06-11 00:00:54.521 +02:00 [DBG] Connection id "0HN49J1PLOLIT" completed keep alive response.
+2024-06-11 00:00:54.522 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5297/User/login - 404 0 null 33.8903ms
+2024-06-11 00:00:54.554 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5297/User/login, Response status code: 404
+2024-06-11 00:00:54.607 +02:00 [DBG] Connection id "0HN49J1PLOLIT", Request id "0HN49J1PLOLIT:00000001": started reading request body.
+2024-06-11 00:00:54.608 +02:00 [DBG] Connection id "0HN49J1PLOLIT", Request id "0HN49J1PLOLIT:00000001": done reading request body.
+2024-06-11 00:00:56.724 +02:00 [DBG] Connection id "0HN49J1PLOLIT" received FIN.
+2024-06-11 00:00:56.726 +02:00 [DBG] Connection id "0HN49J1PLOLIT" disconnecting.
+2024-06-11 00:00:56.728 +02:00 [DBG] Connection id "0HN49J1PLOLIT" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-11 00:00:56.742 +02:00 [DBG] Connection id "0HN49J1PLOLIT" stopped.
+2024-06-11 00:00:58.379 +02:00 [DBG] Connection id "0HN49J1PLOLIU" accepted.
+2024-06-11 00:00:58.380 +02:00 [DBG] Connection id "0HN49J1PLOLIU" started.
+2024-06-11 00:00:58.381 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:5297/User/login - application/json 86
+2024-06-11 00:00:58.383 +02:00 [DBG] POST requests are not supported
+2024-06-11 00:00:58.383 +02:00 [DBG] The request has an origin header: 'http://localhost:5297'.
+2024-06-11 00:00:58.384 +02:00 [INF] CORS policy execution successful.
+2024-06-11 00:00:58.385 +02:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-06-11 00:00:58.385 +02:00 [DBG] Connection id "0HN49J1PLOLIU" completed keep alive response.
+2024-06-11 00:00:58.386 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:5297/User/login - 404 0 null 5.0075ms
+2024-06-11 00:00:58.389 +02:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: POST http://localhost:5297/User/login, Response status code: 404
+2024-06-11 00:00:58.393 +02:00 [DBG] Connection id "0HN49J1PLOLIU", Request id "0HN49J1PLOLIU:00000001": started reading request body.
+2024-06-11 00:00:58.395 +02:00 [DBG] Connection id "0HN49J1PLOLIU", Request id "0HN49J1PLOLIU:00000001": done reading request body.
+2024-06-11 00:01:01.727 +02:00 [DBG] Connection id "0HN49J1PLOLIU" received FIN.
+2024-06-11 00:01:01.732 +02:00 [DBG] Connection id "0HN49J1PLOLIU" disconnecting.
+2024-06-11 00:01:01.734 +02:00 [DBG] Connection id "0HN49J1PLOLIU" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-11 00:01:01.735 +02:00 [DBG] Connection id "0HN49J1PLOLIU" stopped.
+2024-06-11 00:01:23.265 +02:00 [INF] Application is shutting down...
+2024-06-11 00:01:23.268 +02:00 [DBG] Hosting stopping
+2024-06-11 00:01:23.278 +02:00 [DBG] Connection id "0HN49J1PLOLIO" disconnecting.
+2024-06-11 00:01:23.280 +02:00 [DBG] Connection id "0HN49J1PLOLIO" stopped.
+2024-06-11 00:01:23.281 +02:00 [DBG] Connection id "0HN49J1PLOLIO" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-06-11 00:01:23.290 +02:00 [DBG] Hosting stopped
+2024-06-11 01:55:10.153 +02:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-06-11 01:55:10.742 +02:00 [DBG] Entity Framework Core 8.0.6 initialized 'UserContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:8.0.4+51faf6e9c9c7ef99c3e98d98a96adb8fa8ae4553' with options: None
+2024-06-11 01:55:11.779 +02:00 [DBG] 'UserContext' disposed.

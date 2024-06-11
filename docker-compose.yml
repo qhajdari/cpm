@@ -1,0 +1,57 @@
+version: '3.8'
+
+services:
+  user-management-service:
+    build:
+      context: ./UserManagementService
+      dockerfile: Dockerfile
+    ports:
+      - "5000:80"
+    depends_on:
+      - postgres-db
+      
+  project-management-service:
+    build:
+      context: ./ProjectManagementService
+      dockerfile: Dockerfile
+    ports:
+      - "5001:8080"
+    depends_on:
+      - postgres-db
+      
+  resource-management-service:
+    build:
+      context: ./ResourceManagementService
+      dockerfile: Dockerfile
+    ports:
+      - "5002:80"
+    depends_on:
+      - postgres-db
+      
+  scheduling-service:
+    build:
+      context: ./SchedulingService
+      dockerfile: Dockerfile
+    ports:
+      - "5003:80"
+    depends_on:
+      - postgres-db
+      
+  document-management-service:
+    build:
+      context: ./DocumentManagementService
+      dockerfile: Dockerfile
+    ports:
+      - "5004:80"
+    depends_on:
+      - postgres-db
+      
+  postgres-db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: cpm
+    ports:
+      - "5432:5432"
