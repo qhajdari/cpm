@@ -9,6 +9,7 @@ using UserManagementService.Models;
 using UserManagementService.Data;
 using RabbitMQ.Client;
 using System.Text.Json;
+using UserManagementService.DTO;
 
 
 namespace UserManagementService.Controllers;
@@ -48,14 +49,14 @@ public class UserController : ControllerBase
         await _context.SaveChangesAsync();
 
         // Publish event to RabbitMQ
-        PublishUserRegisteredEvent(user);
+        //PublishUserRegisteredEvent(user);
 
         _logger.LogInformation("User with email {Email} registered successfully.", user.Email);
         return Ok(new { Message = "User registered successfully." });
     }
 
     [HttpPost("login")]
-    public async Task<IActionResult> Login([FromBody] User loginRequest)
+    public async Task<IActionResult> Login([FromBody] LoginDto loginRequest)
     {
         _logger.LogInformation("Attempting to log in user with email: {Email}", loginRequest.Email);
 

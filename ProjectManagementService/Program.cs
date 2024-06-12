@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using ProjectManagementService.Data;
 using ProjectManagementService.Services;
+using ProjectManagementService.Events;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -43,6 +44,8 @@ builder.Services.AddScoped<IProjectRepository, ProjectRepository>();
 builder.Services.AddScoped<IProjectService, ProjectService>();
 builder.Services.AddScoped<ITaskRepository, TaskRepository>();
 builder.Services.AddScoped<ITaskService, TaskService>();
+// builder.Services.AddHostedService<UserRegisteredEventHandler>();
+
 
 // Add controllers
 builder.Services.AddControllers();

@@ -8,8 +8,9 @@ using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
 using ProjectManagementService.Models;
+using ProjectManagementService.Services;
 
-namespace ProjectManagementService.Services
+namespace ProjectManagementService.Events
 {
     public class UserRegisteredEventHandler : BackgroundService
     {
@@ -24,7 +25,7 @@ namespace ProjectManagementService.Services
             _configuration = configuration;
         }
 
-        protected override System.Threading.Tasks.Task ExecuteAsync(CancellationToken stoppingToken)
+        protected override  System.Threading.Tasks.Task ExecuteAsync(CancellationToken stoppingToken)
         {
             stoppingToken.ThrowIfCancellationRequested();
 
@@ -39,37 +40,48 @@ namespace ProjectManagementService.Services
                                  arguments: null);
 
             var consumer = new EventingBasicConsumer(channel);
-            consumer.Received += (model, ea) =>
+            consumer.Received += async (model, ea) =>
             {
                 var body = ea.Body.ToArray();
                 var message = Encoding.UTF8.GetString(body);
                 var user = JsonSerializer.Deserialize<User>(message);
 
-                // Handle the event (e.g., create a project for the new user)
-                HandleUserRegistered(user);
+                _logger.LogInformation("Received user registered event for user: {Email}", user.Email);
+
+                try
+                {
+                    await HandleUserRegistered(user);
+                }
+                catch (Exception ex)
+                {
+                    _logger.LogError(ex, "Error handling user registered event for user: {Email}", user.Email);
+                }
             };
 
             channel.BasicConsume(queue: "user_registered",
                                  autoAck: true,
                                  consumer: consumer);
 
+            _logger.LogInformation("Started listening for user registered events");
+
             return System.Threading.Tasks.Task.CompletedTask;
         }
 
-        private async void HandleUserRegistered(User user)
+        private async  System.Threading.Tasks.Task HandleUserRegistered(User user)
         {
-           
-                // Example: Create a default project for the new user
-                var project = new Project
-                {
-                    Name = $"Default Project for {user.FirstName} {user.LastName}",
-                    UserId = user.Id,
-                    StartDate = DateTime.Now
-                };
-                await _projectService.AddProjectAsync(project);
+            // Example: Create a default project for the new user
+            var project = new Project
+            {
+                Name = $"Default Project for {user.FirstName} {user.LastName}",
+                UserId = user.Id,
+                StartDate = DateTime.Now
+            };
 
-                _logger.LogInformation("Created default project for user with email: {Email}", user.Email);
-            
+            _logger.LogInformation("Creating default project for user: {Email}", user.Email);
+
+            await _projectService.AddProjectAsync(project);
+
+            _logger.LogInformation("Created default project for user: {Email}", user.Email);
         }
     }
 }

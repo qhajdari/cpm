@@ -1,0 +1,36 @@
+2024-06-13 00:17:27.774 +02:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-06-13 00:17:28.405 +02:00 [DBG] Entity Framework Core 8.0.6 initialized 'UserContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:8.0.4+51faf6e9c9c7ef99c3e98d98a96adb8fa8ae4553' with options: None
+2024-06-13 00:17:28.478 +02:00 [DBG] Creating DbConnection.
+2024-06-13 00:17:28.510 +02:00 [DBG] Created DbConnection. (30ms).
+2024-06-13 00:17:28.519 +02:00 [DBG] Opening connection to database 'cpm' on server 'tcp://postgres-db:5432'.
+2024-06-13 00:17:31.232 +02:00 [DBG] An error occurred using the connection to database 'cpm' on server 'tcp://postgres-db:5432'.
+2024-06-13 00:17:31.239 +02:00 [DBG] 'UserContext' disposed.
+2024-06-13 00:17:31.242 +02:00 [DBG] Disposing connection to database 'cpm' on server 'tcp://postgres-db:5432'.
+2024-06-13 00:17:31.249 +02:00 [DBG] Disposed connection to database 'cpm' on server 'tcp://postgres-db:5432' (1ms).
+2024-06-13 00:19:05.238 +02:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-06-13 00:19:05.831 +02:00 [DBG] Entity Framework Core 8.0.6 initialized 'UserContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:8.0.4+51faf6e9c9c7ef99c3e98d98a96adb8fa8ae4553' with options: None
+2024-06-13 00:19:05.867 +02:00 [DBG] Creating DbConnection.
+2024-06-13 00:19:05.904 +02:00 [DBG] Created DbConnection. (36ms).
+2024-06-13 00:19:05.917 +02:00 [DBG] Opening connection to database 'cpm' on server 'tcp://postgres-db:5432'.
+2024-06-13 00:19:08.635 +02:00 [DBG] An error occurred using the connection to database 'cpm' on server 'tcp://postgres-db:5432'.
+2024-06-13 00:19:08.643 +02:00 [DBG] 'UserContext' disposed.
+2024-06-13 00:19:08.649 +02:00 [DBG] Disposing connection to database 'cpm' on server 'tcp://postgres-db:5432'.
+2024-06-13 00:19:08.654 +02:00 [DBG] Disposed connection to database 'cpm' on server 'tcp://postgres-db:5432' (1ms).
+2024-06-13 00:19:44.593 +02:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-06-13 00:19:45.173 +02:00 [DBG] Entity Framework Core 8.0.6 initialized 'UserContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:8.0.4+51faf6e9c9c7ef99c3e98d98a96adb8fa8ae4553' with options: None
+2024-06-13 00:19:45.196 +02:00 [DBG] 'UserContext' disposed.
+2024-06-13 00:20:01.866 +02:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-06-13 00:20:02.750 +02:00 [DBG] Entity Framework Core 8.0.6 initialized 'UserContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:8.0.4+51faf6e9c9c7ef99c3e98d98a96adb8fa8ae4553' with options: None
+2024-06-13 00:20:02.819 +02:00 [DBG] 'UserContext' disposed.
+2024-06-13 00:21:07.057 +02:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-06-13 00:21:07.635 +02:00 [DBG] Entity Framework Core 8.0.6 initialized 'UserContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:8.0.4+51faf6e9c9c7ef99c3e98d98a96adb8fa8ae4553' with options: None
+2024-06-13 00:21:07.659 +02:00 [DBG] Creating DbConnection.
+2024-06-13 00:21:07.693 +02:00 [DBG] Created DbConnection. (32ms).
+2024-06-13 00:21:07.703 +02:00 [DBG] Opening connection to database 'cpm' on server 'tcp://postgres-db:5432'.
+2024-06-13 00:21:10.435 +02:00 [DBG] An error occurred using the connection to database 'cpm' on server 'tcp://postgres-db:5432'.
+2024-06-13 00:21:10.441 +02:00 [DBG] 'UserContext' disposed.
+2024-06-13 00:21:10.444 +02:00 [DBG] Disposing connection to database 'cpm' on server 'tcp://postgres-db:5432'.
+2024-06-13 00:21:10.449 +02:00 [DBG] Disposed connection to database 'cpm' on server 'tcp://postgres-db:5432' (1ms).
+2024-06-13 00:22:08.143 +02:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-06-13 00:22:08.799 +02:00 [DBG] Entity Framework Core 8.0.6 initialized 'UserContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:8.0.4+51faf6e9c9c7ef99c3e98d98a96adb8fa8ae4553' with options: None
+2024-06-13 00:22:09.399 +02:00 [DBG] 'UserContext' disposed.
