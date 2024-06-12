@@ -1,12 +1,12 @@
 {
   "Routes": [
     {
-      "DownstreamPathTemplate": "/api/user/{everything}",
+      "DownstreamPathTemplate": "/user/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "user-management-service",
-          "Port": 5001
+          "Port": 8080
         }
       ],
       "UpstreamPathTemplate": "/api/user/{everything}",
@@ -18,12 +18,12 @@
       ]
     },
     {
-      "DownstreamPathTemplate": "/api/project/{everything}",
+      "DownstreamPathTemplate": "/project/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "project-management-service",
-          "Port": 5002
+          "Port": 8080
         }
       ],
       "UpstreamPathTemplate": "/api/project/{everything}",
@@ -35,12 +35,12 @@
       ]
     },
     {
-      "DownstreamPathTemplate": "/api/resource/{everything}",
+      "DownstreamPathTemplate": "/resource/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "resource-management-service",
-          "Port": 5003
+          "Port": 8080
         }
       ],
       "UpstreamPathTemplate": "/api/resource/{everything}",
@@ -52,12 +52,12 @@
       ]
     },
     {
-      "DownstreamPathTemplate": "/api/schedule/{everything}",
+      "DownstreamPathTemplate": "/schedule/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "scheduling-service",
-          "Port": 5004
+          "Port": 8080
         }
       ],
       "UpstreamPathTemplate": "/api/schedule/{everything}",
@@ -69,12 +69,12 @@
       ]
     },
     {
-      "DownstreamPathTemplate": "/api/document/{everything}",
+      "DownstreamPathTemplate": "/document/{everything}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
           "Host": "document-management-service",
-          "Port": 5005
+          "Port": 8080
         }
       ],
       "UpstreamPathTemplate": "/api/document/{everything}",
@@ -87,6 +87,6 @@
     }
   ],
   "GlobalConfiguration": {
-  "Urls": "http://0.0.0.0:8080"
+  "BaseUrl": "http://0.0.0.0:8080"
   }
 }

@@ -1,17 +1,16 @@
+using Ocelot.DependencyInjection;
+using Ocelot.Middleware;
+
 var builder = WebApplication.CreateBuilder(args);
+builder.Configuration.SetBasePath(builder.Environment.ContentRootPath)
+        .AddJsonFile("ocelot.json", optional:false, reloadOnChange:true);
 
-// Configure services
-builder.Services.AddSingleton(builder);
-builder.Services.AddControllers();
-
-// Configure app configuration
-builder.Configuration.AddJsonFile( "configuration.json");
-
+builder.Services.AddOcelot(builder.Configuration);
 // Use Startup
 //builder.Services.AddStartup<Startup>();
 
 var app = builder.Build();
+await app.UseOcelot();
 
-app.MapGet("/", () => "Hello World!");
-
+// app.MapGet("/", () => "Hello World!");
 app.Run();

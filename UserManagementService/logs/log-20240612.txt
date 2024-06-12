@@ -1,0 +1,18 @@
+2024-06-12 17:14:06.372 +02:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-06-12 17:14:06.939 +02:00 [DBG] Entity Framework Core 8.0.6 initialized 'UserContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:8.0.4+51faf6e9c9c7ef99c3e98d98a96adb8fa8ae4553' with options: None
+2024-06-12 17:14:06.967 +02:00 [DBG] Creating DbConnection.
+2024-06-12 17:14:07.000 +02:00 [DBG] Created DbConnection. (32ms).
+2024-06-12 17:14:07.010 +02:00 [DBG] Opening connection to database 'cpm' on server 'tcp://localhost:5432'.
+2024-06-12 17:14:07.180 +02:00 [DBG] An error occurred using the connection to database 'cpm' on server 'tcp://localhost:5432'.
+2024-06-12 17:14:07.187 +02:00 [DBG] 'UserContext' disposed.
+2024-06-12 17:14:07.193 +02:00 [DBG] Disposing connection to database 'cpm' on server 'tcp://localhost:5432'.
+2024-06-12 17:14:07.198 +02:00 [DBG] Disposed connection to database 'cpm' on server 'tcp://localhost:5432' (1ms).
+2024-06-12 17:15:07.228 +02:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-06-12 17:15:07.822 +02:00 [DBG] Entity Framework Core 8.0.6 initialized 'UserContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:8.0.4+51faf6e9c9c7ef99c3e98d98a96adb8fa8ae4553' with options: None
+2024-06-12 17:15:07.849 +02:00 [DBG] Creating DbConnection.
+2024-06-12 17:15:07.883 +02:00 [DBG] Created DbConnection. (32ms).
+2024-06-12 17:15:07.893 +02:00 [DBG] Opening connection to database 'cpm' on server 'tcp://application-postgres-db-1:5432'.
+2024-06-12 17:15:08.934 +02:00 [DBG] An error occurred using the connection to database 'cpm' on server 'tcp://application-postgres-db-1:5432'.
+2024-06-12 17:15:08.940 +02:00 [DBG] 'UserContext' disposed.
+2024-06-12 17:15:08.942 +02:00 [DBG] Disposing connection to database 'cpm' on server 'tcp://application-postgres-db-1:5432'.
+2024-06-12 17:15:08.947 +02:00 [DBG] Disposed connection to database 'cpm' on server 'tcp://application-postgres-db-1:5432' (1ms).

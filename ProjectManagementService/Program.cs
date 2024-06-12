@@ -12,22 +12,41 @@ Log.Logger = new LoggerConfiguration()
     .WriteTo.File("logs/log-.txt", rollingInterval: RollingInterval.Day)
     .CreateLogger();
 
-builder.Host.UseSerilog(); // Add this line to use Serilog as the logging provider
+builder.Host.UseSerilog(); // Use Serilog as the logging provider
 
-
-// Add services to the container.
+// Add services to the container
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ProjectContext>(options =>
     options.UseNpgsql(connectionString));
 
+// Ensure database is created and migrated
+using (var scope = builder.Services.BuildServiceProvider().CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<ProjectContext>();
+     // Ensure database is created and apply migrations if there are any pending
+    if (db.Database.GetPendingMigrations().Any())
+    {
+        try
+        {
+            db.Database.Migrate();
+        }
+        catch (Exception ex)
+        {
+            Log.Error(ex, "An error occurred while applying migrations");
+            throw;
+        }
+    }
+}
+
+// Register application services
 builder.Services.AddScoped<IProjectRepository, ProjectRepository>();
 builder.Services.AddScoped<IProjectService, ProjectService>();
 builder.Services.AddScoped<ITaskRepository, TaskRepository>();
 builder.Services.AddScoped<ITaskService, TaskService>();
 
-// Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+// Add controllers
 builder.Services.AddControllers();
+
 // Add CORS policy
 builder.Services.AddCors(options =>
 {
@@ -40,24 +59,23 @@ builder.Services.AddCors(options =>
         });
 });
 
+// Configure Swagger
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-app.UseSwagger();
-app.UseSwaggerUI();
-
+// Configure the HTTP request pipeline
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
 
 app.UseHttpsRedirection();
-
 app.UseCors("AllowAll");
-
 app.UseAuthorization();
-
 app.MapControllers();
-
 
 // Log application start
 try
