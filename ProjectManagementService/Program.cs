@@ -23,7 +23,7 @@ builder.Services.AddDbContext<ProjectContext>(options =>
 using (var scope = builder.Services.BuildServiceProvider().CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<ProjectContext>();
-     // Ensure database is created and apply migrations if there are any pending
+    // Ensure database is created and apply migrations if there are any pending
     if (db.Database.GetPendingMigrations().Any())
     {
         try
@@ -66,11 +66,8 @@ builder.Services.AddSwaggerGen();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 app.UseCors("AllowAll");

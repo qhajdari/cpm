@@ -1,0 +1,12 @@
+2024-06-12 19:02:24.175 +02:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-06-12 19:02:24.837 +02:00 [DBG] Entity Framework Core 8.0.6 initialized 'ProjectContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:8.0.4+51faf6e9c9c7ef99c3e98d98a96adb8fa8ae4553' with options: None
+2024-06-12 19:02:24.858 +02:00 [DBG] Creating DbConnection.
+2024-06-12 19:02:24.896 +02:00 [DBG] Created DbConnection. (34ms).
+2024-06-12 19:02:24.907 +02:00 [DBG] Opening connection to database 'cpm' on server 'tcp://postgres-db:5432'.
+2024-06-12 19:02:27.632 +02:00 [DBG] An error occurred using the connection to database 'cpm' on server 'tcp://postgres-db:5432'.
+2024-06-12 19:02:27.638 +02:00 [DBG] 'ProjectContext' disposed.
+2024-06-12 19:02:27.641 +02:00 [DBG] Disposing connection to database 'cpm' on server 'tcp://postgres-db:5432'.
+2024-06-12 19:02:27.648 +02:00 [DBG] Disposed connection to database 'cpm' on server 'tcp://postgres-db:5432' (2ms).
+2024-06-12 19:10:14.199 +02:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-06-12 19:10:14.914 +02:00 [DBG] Entity Framework Core 8.0.6 initialized 'ProjectContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:8.0.4+51faf6e9c9c7ef99c3e98d98a96adb8fa8ae4553' with options: None
+2024-06-12 19:10:15.555 +02:00 [DBG] 'ProjectContext' disposed.

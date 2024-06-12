@@ -6,7 +6,7 @@ services:
       context: ./UserManagementService
       dockerfile: Dockerfile
     ports:
-      - "5001:80"
+      - "5001:8080"
     depends_on:
       - postgres-db
       
@@ -56,6 +56,12 @@ services:
     ports:
       - "5432:5432"
 
+  rabbitmq:
+      image: rabbitmq:3-management
+      ports:
+        - "5672:5672"
+        - "15672:15672"
+  
   api-gateway:
     build:
       context: ./ApiGateway

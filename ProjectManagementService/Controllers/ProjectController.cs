@@ -4,6 +4,8 @@ using ProjectManagementService.Services;
 using Serilog;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using RabbitMQ.Client;
+using RabbitMQ.Client.Events;
 
 namespace ProjectManagementService.Controllers
 {

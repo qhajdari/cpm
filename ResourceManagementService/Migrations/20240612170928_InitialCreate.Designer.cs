@@ -4,14 +4,14 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
-using UserManagementService.Data;
+using ResourceManagementService.Data;
 
 #nullable disable
 
-namespace UserManagementService.Migrations
+namespace ResourceManagementService.Migrations
 {
-    [DbContext(typeof(UserContext))]
-    [Migration("20240610235511_InitialCreate")]
+    [DbContext(typeof(ResourceContext))]
+    [Migration("20240612170928_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -19,13 +19,13 @@ namespace UserManagementService.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasDefaultSchema("UserManagement")
+                .HasDefaultSchema("ResourceManagement")
                 .HasAnnotation("ProductVersion", "8.0.6")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("UserManagementService.Models.User", b =>
+            modelBuilder.Entity("ResourceManagementService.Models.Resource", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -33,21 +33,24 @@ namespace UserManagementService.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Email")
+                    b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("PasswordHash")
+                    b.Property<bool>("IsAvailable")
+                        .HasColumnType("boolean");
+
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("Username")
+                    b.Property<string>("Type")
                         .IsRequired()
                         .HasColumnType("text");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Users", "UserManagement");
+                    b.ToTable("Resources", "ResourceManagement");
                 });
 #pragma warning restore 612, 618
         }

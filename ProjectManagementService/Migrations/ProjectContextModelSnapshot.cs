@@ -45,6 +45,9 @@ namespace ProjectManagementService.Migrations
                     b.Property<DateTime>("StartDate")
                         .HasColumnType("timestamp with time zone");
 
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer");
+
                     b.HasKey("Id");
 
                     b.ToTable("Projects", "ProjectManagement");

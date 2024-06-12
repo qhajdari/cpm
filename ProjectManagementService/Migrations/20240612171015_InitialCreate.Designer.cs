@@ -5,14 +5,14 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
-using SchedulingService.Data;
+using ProjectManagementService.Data;
 
 #nullable disable
 
-namespace SchedulingService.Migrations
+namespace ProjectManagementService.Migrations
 {
-    [DbContext(typeof(SchedulingContext))]
-    [Migration("20240610235400_InitialCreate")]
+    [DbContext(typeof(ProjectContext))]
+    [Migration("20240612171015_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -20,13 +20,13 @@ namespace SchedulingService.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasDefaultSchema("ScheduleManagement")
+                .HasDefaultSchema("ProjectManagement")
                 .HasAnnotation("ProductVersion", "8.0.6")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("SchedulingService.Models.Event", b =>
+            modelBuilder.Entity("ProjectManagementService.Models.Project", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -34,27 +34,29 @@ namespace SchedulingService.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<DateTime>("EndTime")
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("EndDate")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("ScheduleId")
-                        .HasColumnType("integer");
-
-                    b.Property<DateTime>("StartTime")
+                    b.Property<DateTime>("StartDate")
                         .HasColumnType("timestamp with time zone");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ScheduleId");
-
-                    b.ToTable("Events", "ScheduleManagement");
+                    b.ToTable("Projects", "ProjectManagement");
                 });
 
-            modelBuilder.Entity("SchedulingService.Models.Schedule", b =>
+            modelBuilder.Entity("ProjectManagementService.Models.Task", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -62,29 +64,41 @@ namespace SchedulingService.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("DueDate")
+                        .HasColumnType("timestamp with time zone");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<int>("ProjectId")
+                        .HasColumnType("integer");
+
                     b.HasKey("Id");
 
-                    b.ToTable("Schedules", "ScheduleManagement");
+                    b.HasIndex("ProjectId");
+
+                    b.ToTable("Tasks", "ProjectManagement");
                 });
 
-            modelBuilder.Entity("SchedulingService.Models.Event", b =>
+            modelBuilder.Entity("ProjectManagementService.Models.Task", b =>
                 {
-                    b.HasOne("SchedulingService.Models.Schedule", "Schedule")
-                        .WithMany("Events")
-                        .HasForeignKey("ScheduleId")
+                    b.HasOne("ProjectManagementService.Models.Project", "Project")
+                        .WithMany("Tasks")
+                        .HasForeignKey("ProjectId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Schedule");
+                    b.Navigation("Project");
                 });
 
-            modelBuilder.Entity("SchedulingService.Models.Schedule", b =>
+            modelBuilder.Entity("ProjectManagementService.Models.Project", b =>
                 {
-                    b.Navigation("Events");
+                    b.Navigation("Tasks");
                 });
 #pragma warning restore 612, 618
         }
