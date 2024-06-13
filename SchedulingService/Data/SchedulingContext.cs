@@ -12,6 +12,7 @@ public class SchedulingContext : DbContext
      protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.HasDefaultSchema("ScheduleManagement");
+        
     }
 }
 
