@@ -10,5 +10,6 @@ public class ResourceContext : DbContext
      protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.HasDefaultSchema("ResourceManagement");
+        
     }
 }
