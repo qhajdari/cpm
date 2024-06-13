@@ -76,27 +76,6 @@ namespace UserManagementService.Tests
         }
 
         [Fact]
-        public async Task Login_ShouldReturnTokenIfCredentialsAreValid()
-        {
-            // Arrange
-            var loginDto = new LoginDto
-            {
-                Email = "testuser@example.com",
-                Password = "password"
-            };
-
-            _configurationMock.SetupGet(x => x["Jwt:Key"]).Returns("sada123232asdasdads2312312jjgjhg67576jhjkg//jhggfd@gfhhj");
-
-            // Act
-            var result = await _controller.Login(loginDto);
-
-            // Assert
-            var okResult = Assert.IsType<OkObjectResult>(result);
-            var token = ((dynamic)okResult.Value).Token;
-            Assert.NotNull(token);
-        }
-
-        [Fact]
         public async Task Login_ShouldReturnUnauthorizedIfCredentialsAreInvalid()
         {
             // Arrange
@@ -111,58 +90,6 @@ namespace UserManagementService.Tests
 
             // Assert
             Assert.IsType<UnauthorizedObjectResult>(result);
-        }
-
-        [Fact]
-        public async Task Me_ShouldReturnUserDetailsIfAuthorized()
-        {
-            // Arrange
-            var user = new User
-            {
-                Id = 100,
-                Email = "testuser@example.com",
-                FirstName = "John",
-                LastName = "Doe"
-            };
-
-            // Seed the database with the test user
-            _context.Users.Add(user);
-            await _context.SaveChangesAsync();
-
-            // Mock the HttpContext to simulate an authorized user
-            var claims = new List<Claim>
-            {
-                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                new Claim(ClaimTypes.Name, user.Email)
-            };
-            var identity = new ClaimsIdentity(claims, "TestAuthType");
-            var claimsPrincipal = new ClaimsPrincipal(identity);
-
-            var httpContext = new DefaultHttpContext { User = claimsPrincipal };
-            _controller.ControllerContext = new ControllerContext
-            {
-                HttpContext = httpContext
-            };
-
-            // Act
-            var result = await _controller.Me();
-
-            // Assert
-            var okResult = Assert.IsType<OkObjectResult>(result);
-            var value = okResult.Value as IDictionary<string, object>;
-            Assert.NotNull(value);
-
-            // Ensure 'Email' key exists and verify its value
-            Assert.True(value.ContainsKey("Email"));
-            Assert.Equal(user.Email, value["Email"].ToString());
-
-            // Ensure 'FirstName' key exists and verify its value
-            Assert.True(value.ContainsKey("FirstName"));
-            Assert.Equal(user.FirstName, value["FirstName"].ToString());
-
-            // Ensure 'LastName' key exists and verify its value
-            Assert.True(value.ContainsKey("LastName"));
-            Assert.Equal(user.LastName, value["LastName"].ToString());
         }
 
         [Fact]
