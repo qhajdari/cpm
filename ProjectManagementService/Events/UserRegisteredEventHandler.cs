@@ -25,7 +25,7 @@ namespace ProjectManagementService.Events
             _configuration = configuration;
         }
 
-        protected override  System.Threading.Tasks.Task ExecuteAsync(CancellationToken stoppingToken)
+        protected override System.Threading.Tasks.Task ExecuteAsync(CancellationToken stoppingToken)
         {
             stoppingToken.ThrowIfCancellationRequested();
 
@@ -64,23 +64,23 @@ namespace ProjectManagementService.Events
 
             _logger.LogInformation("Started listening for user registered events");
 
+
             return System.Threading.Tasks.Task.CompletedTask;
         }
 
-        private async  System.Threading.Tasks.Task HandleUserRegistered(User user)
+        private async System.Threading.Tasks.Task HandleUserRegistered(User user)
         {
             // Example: Create a default project for the new user
             var project = new Project
             {
                 Name = $"Default Project for {user.FirstName} {user.LastName}",
-                UserId = user.Id,
-                StartDate = DateTime.Now
+                Description = "Project created from event",
+                StartDate = DateTime.UtcNow,
+                EndDate = DateTime.UtcNow
             };
 
             _logger.LogInformation("Creating default project for user: {Email}", user.Email);
-
             await _projectService.AddProjectAsync(project);
-
             _logger.LogInformation("Created default project for user: {Email}", user.Email);
         }
     }

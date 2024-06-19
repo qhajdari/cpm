@@ -33,7 +33,6 @@ public class UserController : ControllerBase
     public async Task<IActionResult> Register(User user)
     {
         _logger.LogInformation("Registering user with email: {Email}", user.Email);
-
         // Check if user already exists
         var existingUser = await _context.Users.FirstOrDefaultAsync(u => u.Email == user.Email);
         if (existingUser != null)
@@ -49,7 +48,8 @@ public class UserController : ControllerBase
         await _context.SaveChangesAsync();
 
         // Publish event to RabbitMQ
-        //PublishUserRegisteredEvent(user);
+        PublishUserRegisteredEvent(user);
+
 
         _logger.LogInformation("User with email {Email} registered successfully.", user.Email);
         return Ok(new { Message = "User registered successfully." });
@@ -120,13 +120,14 @@ public class UserController : ControllerBase
             user.LastName
         });
     }
-
-    private void PublishUserRegisteredEvent(User user)
+    public void PublishUserRegisteredEvent(User user)
     {
-        var factory = new ConnectionFactory() { HostName = _configuration["RabbitMQ:HostName"] };
-        using var connection = factory.CreateConnection();
-        using var channel = connection.CreateModel();
-        
+        try
+        {
+            var factory = new ConnectionFactory() { HostName = _configuration["RabbitMQ:HostName"] };
+            using var connection = factory.CreateConnection();
+            using var channel = connection.CreateModel();
+
             channel.QueueDeclare(queue: "user_registered",
                                  durable: false,
                                  exclusive: false,
@@ -142,6 +143,11 @@ public class UserController : ControllerBase
                                  body: body);
 
             _logger.LogInformation("Published user registered event for user with email: {Email}", user.Email);
-        
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, "An error occurred while publishing the user registered event");
+        }
     }
+
 }
